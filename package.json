@@ -10,9 +10,8 @@
     "url": "https://felipesan.com"
   },
   "scripts": {
-    "start": "npm run build && npm run server",
-    "build": "browserify src -t babelify -o public/js/app.js",
-    "server": "http-server public -p 3000"
+    "start": "npm run build && http-server",
+    "build": "browserify src -t babelify -o public/js/app.js"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
