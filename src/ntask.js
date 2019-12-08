@@ -8,7 +8,7 @@ class Ntask extends TinyEmitter {
   constructor() {
     super()
     this.request = Request
-    this.URL = process.env.BASE_URL
+    this.URL = 'https://fs-ntask-api.herokuapp.com/'
   }
 }
 
