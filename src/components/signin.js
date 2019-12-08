@@ -37,8 +37,13 @@ class Signin extends Ntask {
       }
 
       this.request(opts, (err, res, data) => {
-        if (err || res.status === 401) {
-          this.emit('error', err)
+        if (
+          err ||
+          res.status === 400 ||
+          res.status === 401 ||
+          res.status === 404
+        ) {
+          this.emit('error', res.body)
         } else {
           this.emit('signin', data.token)
         }
